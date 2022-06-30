@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dk-blue: hsl(238, 29%, 16%);
+    --red: hsl(14, 88%, 65%);
+    --violet: hsl(273, 75%, 66%);
+    --blue: hsl(240, 73%, 65%);
+    --dk-gray-blue: hsl(237, 12%, 33%);
+    --dkr-gray-blue: hsl(240, 6%, 50%);
+    --lt-gray-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    background: linear-gradient(var(--violet), var(--blue));
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;    
+}
+
+.mob-pic {
+    position: absolute;
+    width: 240px;
+    top:40px;
+    left:70px;
+    z-index: 5;
+}
+
+.mob-pat {
+    position: absolute;
+    width: 240px;
+    top:150px;
+    left:70px;
+    z-index: 4;
+}
+
+.accordion {  
+    width: 340px;
+    background-color: white;
+    border-radius: 25px;
+    margin: 150px auto 90px;
+    padding: 78px 20px 45px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 30px;
+}
+
+.accordion .container {
+    position: relative;
+    margin: 10px;
+}
+
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion .label::before {
+    content: url(images/icon-arrow-down.svg);
+    position: absolute;
+    font-weight: 700;
+    color: var(--red);
+    top: 50%;
+    right: -5px;
+    font-size: 12px;
+    transform: translateY(-50%);
+}
+
+.accordion .content {
+    position: relative;
+    height: 0;
+    font-size: 13px;
+    color: var(--dkr-gray-blue);
+    text-align: left;
+    line-height: 18px;
+    width: 270px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accordion .container.container.active .label {
+    font-weight: 700;
+}
+
+.accordion .container.active .content {
+    height: 68px;
+}
+
+.accordion .container.active .label::before {
+    content: url(images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+    color: var(--red);
+    font-weight: 700;
+    font-size: 12px;
+    transition: 0.2s ease-in-out;
+}
+
+.container .label {
+    font-size: 14px;
+    color: var(--dk-gray-blue);
+}
+
+
+hr {
+    margin-left: 0;
+    color: var(--dkr-gray-blue);
+    opacity: 40%;
+    width: 100;
+}
+
+
+.attribution {
+     font-size: 11px; 
+     text-align: center; 
+    padding-bottom: 20px;
+    }
+
+.attribution a {
+    color: var(--lt-gray-blue); 
+}
+
+
