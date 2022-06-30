@@ -98,7 +98,7 @@ h1 {
 
 .accordion .container.active .label::before {
     content: url(images/icon-arrow-down.svg);
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(60%);
     color: var(--red);
     font-weight: 700;
     font-size: 12px;
